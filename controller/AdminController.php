@@ -2,14 +2,15 @@
 define('VIEW_PATH', ROOT.'view/admin/');
 class AdminController{
 	static $default_config = array(
-	  'site_name' =>'OneIndex',
-	  'password' => 'oneindex',
+	  'site_name' =>'Nanikass',
+	  'header_name' => '🅽🅰🅽🅸🅺🅰🆂🆂',
+	  'password' => 'nanikass',
 	  'style'=>'material',
 	  'onedrive_root' =>'',
 	  'cache_type'=>'secache',
-	  'cache_expire_time' => 3600,
-	  'cache_refresh_time' => 600,
-	  'root_path' => '?',
+	  'cache_expire_time' => 10,
+	  'cache_refresh_time' => 10,
+	  'root_path' => '',
 	  'show'=> array (
 	  	'stream'=>['txt'],
 	    'image' => ['bmp','jpg','jpeg','png','gif'],
@@ -154,7 +155,7 @@ class AdminController{
 			$redirect_uri = 'http://'.$_SERVER['HTTP_HOST'].get_absolute_path(dirname($_SERVER['PHP_SELF']));
 		}else{
 			// 非https,调用ju.tn中转
-			$redirect_uri = 'https://ju.tn/';
+			$redirect_uri = 'https://ju.tn/onedrive-login';
 		}
 		
 		$ru = "https://developer.microsoft.com/en-us/graph/quick-start?appID=_appId_&appName=_appName_&redirectUrl={$redirect_uri}&platform=option-php";
