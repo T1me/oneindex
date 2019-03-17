@@ -18,25 +18,25 @@
 		<div class="mdui-textfield mdui-textfield-floating-label">
 			<i class="mdui-icon material-icons">https</i>
 			<label class="mdui-textfield-label">应用机密(client secret)</label>
-			<input type="text" type="text" class="mdui-textfield-input" name="client_secret" required value="EIVCx5ztMSxMsga18MQ7rmGf9EIP7zv6tfimb0Kp5Uc="/>
+			<input type="text" type="text" class="mdui-textfield-input" name="client_secret" required value="ryQW434{!etfcwKKPJM94}~"/>
 			<div class="mdui-textfield-error">应用机密不能为空</div>
 		</div>
 		<br>
 		<div class="mdui-textfield mdui-textfield-floating-label">
 		  	<i class="mdui-icon material-icons">&#xe5c3;</i>
 		  	<label class="mdui-textfield-label">应用 ID(client_id)</label>
-		  	<input type="text" class="mdui-textfield-input" name="client_id" required value="ea2b36f6-b8ad-40be-bc0f-e5e4a4a7d4fa"/>
+		  	<input type="text" class="mdui-textfield-input" name="client_id" required value="694fbe92-fb4a-40cb-a45a-a3d28b2afb65"/>
 		  	<div class="mdui-textfield-error">应用 ID不能为空</div>
 		</div>
 		<br>
 
 		<div class="mdui-textfield mdui-textfield-floating-label">
 		   <i class="mdui-icon material-icons">&#xe41a;</i>
-		   <?php if($redirect_uri == 'https://ju.tn/onedrive-login'):?>
+		   <?php if($redirect_uri == 'https://ju.tn/'):?>
 		   <label class="mdui-textfield-label">由于你的网站不是<b>http://localhost/</b>。将通过ju.tn进行中转</label>
 		   <?php endif;?>
 		   <label class="mdui-textfield-label"><?php echo $redirect_uri;?></label>
-		   <input type="text" class="mdui-textfield-input" disabled  value="https://ju.tn/onedrive-login"/>
+		   <input type="text" class="mdui-textfield-input" disabled  value="<?php echo $redirect_uri;?>"/>
 		   <input type="hidden" class="mdui-textfield-input" name="redirect_uri" value="<?php echo $redirect_uri;?>"/>
 		   <div class="mdui-textfield-error">重定向URL不能为空</div>
 		</div>
